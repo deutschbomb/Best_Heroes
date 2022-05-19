@@ -61,14 +61,14 @@ void main() {
 			}
 			if (hero_InStun == 0) {
 				clear_Status(43, 14);
-				//Sleep(1000);
+				Sleep(1000);
 				beating_character(Characters, enemy, hero, enemy_stats, "enemy");
 			}
 			else {
 				hero_InStun--;
 				clear_Status(0, 13);
 				cout << "\n Герой оглушён! Время оглушения: " << hero_InStun << " сек" << endl;
-				//Sleep(200);
+				Sleep(200);
 			}
 			if (enemy_stunLoading != 0)	enemy_stunLoading--;
 			if (Characters[enemy].health_point() != 0) {
@@ -78,14 +78,14 @@ void main() {
 				}
 				if (enemy_InStun == 0) {
 					clear_Status(45, 15);
-					//Sleep(1000);
+					Sleep(1000);
 					beating_character(Characters, enemy, hero, hero_stats, "hero");
 				}
 				else {
 					enemy_InStun--;
 					clear_Status(0, 14);
 					cout << "\n Противник оглушён! Время оглушения: " << enemy_InStun << " сек" << endl;
-					//Sleep(200);
+					Sleep(200);
 				}
 				if (hero_stunLoading != 0)	hero_stunLoading--;
 			}
